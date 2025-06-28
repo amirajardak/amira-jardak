@@ -309,20 +309,20 @@
     <div class="contact-container">
         <!-- Coordonnées Directes -->
         <div class="direct-contact">
+ 
         </div>
-        <form id="contact-form">
-  <div class="input-box">
-    <input type="text" placeholder="Nom et prénom" name="user_name" required>
-    <input type="email" placeholder="Adresse Email" name="user_email" required>
-  </div>
-  <div class="input-box">
-    <input type="text" placeholder="Numéro de portable" name="user_phone">
-    <input type="text" placeholder="Objet de l'email" name="subject">
-  </div>
-  <textarea placeholder="Votre message" name="message" required></textarea>
-  <input type="submit" value="Collaborons ensemble" class="btn">
-</form>
-
+        <form action="https://formspree.io/f/mblyqbaw" method="POST">
+            <div class="input-box">
+                <input type="text" name="nom" placeholder="Nom et prénom">
+                <input type="email" name="email" placeholder="Addresse Email">
+            </div>
+            <div class="input-box">
+                <input type="number" name="num" placeholder="Numéro de portable">
+                <input type="text" name="obj" placeholder="Objet de l'email">
+            </div>
+            <textarea name="sujet" id="" cols="30" rows="10" placeholder="Votre message"></textarea>
+            <input type="submit" value="Collaborons ensemble" class="btn">
+        </form>
     </section>
 
     <!-- footer design -->
@@ -374,36 +374,6 @@
     <script src="js/script.js"></script>
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-<script type="text/javascript">
-  (function(){
-    emailjs.init("4fTHTxPJbtJ7sIA5y"); // ta clé publique
-  })();
-</script>
-<!-- ... fin du contenu de la page ... -->
-
-<!-- EmailJS -->
-<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-<script>
-  (function(){
-    emailjs.init("4fTHTxPJbtJ7sIA5y"); // clé publique
-  })();
-</script>
-
-<script>
-  document.getElementById('contact-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-
-    emailjs.sendForm('service_jnxpc3e', 'template_0jdpw8m', this)
-      .then(function() {
-        alert('Message envoyé avec succès !');
-      }, function(error) {
-        alert('Erreur lors de l\'envoi du message : ' + error.text);
-      });
-  });
-</script>
-
-</body>
-</html>
 
 </body>
 
