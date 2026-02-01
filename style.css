@@ -419,7 +419,7 @@ span {
     position: relative;
     display: flex;
     border-radius: 2rem;
-    box-shadow: 0 0 1rem rgba(0, 0, 0, .1);
+    box-shadow: 0 0 1rem rgb(0, 0, 0);
     overflow: hidden;
 }
 
@@ -438,7 +438,7 @@ span {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(0, 0, 0, .1), var(--main-color));
+    background: linear-gradient(rgb(0, 0, 0), var(--main-color));
     color: var(--white-color);
     display: flex;
     justify-content: center;
@@ -1091,4 +1091,33 @@ img {
 }
 .copyright{
     color: black;
+}
+
+
+/* Dimensions fixes des boxes */
+.portfolio-box {
+  position: relative;
+  width: 420px;
+  height: 350px;
+  overflow: hidden;
+  background: #000; /* fond noir pour les bandes */
+}
+
+/* Images */
+.portfolio-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Vidéos : PAS DE ZOOM */
+.portfolio-box video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;   /* clé ici */
+  display: block;
+}
+
+.portfolio-box video {
+  background-color: #000;
 }
